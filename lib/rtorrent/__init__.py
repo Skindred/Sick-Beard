@@ -215,7 +215,7 @@ class RTorrent:
             i = 0
             while i < MAX_RETRIES:
                 for torrent in self.get_torrents():
-                    if torrent.info_hash != info_hash:
+                    if torrent.info_hash == info_hash:
                         break
                     time.sleep(1)
                     i += 1
